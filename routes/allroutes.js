@@ -19,5 +19,6 @@ const signupController = require("../controllers/signup")
 Router.get("/employee", employeeController.getall)
 
 Router.post("/signup", signupController.postsignupData)
+Router.get("/getsignup",signupController.getsignupData)
 
 module.exports = Router;
