@@ -3,6 +3,10 @@ const Router = express.Router();
 
 const sqlConnection = require('../connection')
 
+exports.getsignupData = async(req,res) => {
+    res.send("hi man")
+}
+
 exports.postsignupData = async(req,res)=>{
 //   return res.send("hi")
 console.log(req)
@@ -17,6 +21,7 @@ console.log(req)
                 if(!err){
                     res.json("post data success")
                 }else{
+                    console.log(err)
                     res.send("failed")
                 }
             })
