@@ -1,0 +1,25 @@
+# nodemysqlconnecttest1
+
+use mytestdatabase;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+show tables
+
+
+drop table 
+show table
+
+
+CREATE TABLE signup (
+    signupid int NOT NULL AUTO_INCREMENT,
+    name varchar(255) ,
+    pswd varchar(255),
+    dob DATE
+    );
+    select * from signup
+    CREATE TABLE signup (
+    signupid INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL UNIQUE,
+    pswd VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL
+   
+);
