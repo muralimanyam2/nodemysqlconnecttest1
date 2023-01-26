@@ -9,6 +9,8 @@ const allroutes = require('./routes/allroutes');
 const { all } = require("./routes/allroutes");
 
 var app = express();
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 
 var cors = require('cors')

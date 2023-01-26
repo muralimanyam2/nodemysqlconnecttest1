@@ -17,7 +17,7 @@ console.log(req)
                 if(!err){
                     res.json("post data success")
                 }else{
-                    res.send("failed")
+                    res.send(err)
                 }
             })
 }

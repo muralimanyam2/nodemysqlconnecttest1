@@ -5,7 +5,7 @@ const sqlConnection = require('../connection')
 
 const employeeController = require("../controllers/employee")
 const signupController = require("../controllers/signup")
-
+const loginController = require("../controllers/login")
 // Router.get("/",(req, res)=>{   working
 //     sqlConnection.query("select * from employee", (err, rows, fields)=>{
 //         if(!err){
@@ -19,5 +19,7 @@ const signupController = require("../controllers/signup")
 Router.get("/employee", employeeController.getall)
 
 Router.post("/signup", signupController.postsignupData)
+
+Router.get("/login", loginController.getLogin)
 
 module.exports = Router;
