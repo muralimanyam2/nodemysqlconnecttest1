@@ -1,7 +1,8 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const dotenv = require('dotenv');
+const jwt = require('jsonwebtoken');
 
 const dbConnection = require('./connection')
 
@@ -12,7 +13,8 @@ var app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-
+dotenv.config();
+let PORT = process.env.PORT || 3000;
 var cors = require('cors')
 app.use(cors())
  
@@ -27,6 +29,6 @@ app.get('/',(req,res)=>{
 })
 
 
-app.listen(3000, '0.0.0.0', ()=>{ // we can remove '0.0.0.0'
+app.listen(PORT, '0.0.0.0', ()=>{ // we can remove '0.0.0.0'
     console.log("app listening")
 })

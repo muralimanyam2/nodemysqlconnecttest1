@@ -4,8 +4,6 @@ const Router = express.Router();
 const sqlConnection = require('../connection')
 
 exports.postsignupData = async(req,res)=>{
-//   return res.send("hi")
-console.log(req)
     var query= `INSERT into signup (name,pswd,dob) VALUE (?,?,?)`;
     var values = [
         req.body.name,

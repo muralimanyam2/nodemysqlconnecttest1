@@ -20,6 +20,6 @@ Router.get("/employee", employeeController.getall)
 
 Router.post("/signup", signupController.postsignupData)
 
-Router.get("/login", loginController.getLogin)
+Router.post("/login", loginController.getLogin)
 
 module.exports = Router;
