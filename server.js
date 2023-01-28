@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
-
+const jwt_decode = require('jwt-decode');
 const dbConnection = require('./connection')
 
 const allroutes = require('./routes/allroutes');

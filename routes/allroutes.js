@@ -22,4 +22,6 @@ Router.post("/signup", signupController.postsignupData)
 
 Router.post("/login", loginController.getLogin)
 
+Router.get("/trailId", loginController.trailId)
+
 module.exports = Router;
